@@ -1,0 +1,84 @@
+.content{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 100px 520px 100px;
+    grid-template-areas:
+    "barra-superior barra-superior"
+    "sidebar area-principal"
+    "pie-página pie-página";
+    gap:3px;
+}
+header{
+    display: grid;
+    grid-area: barra-superior;
+    background-color: antiquewhite;
+    text-align: center;
+}
+aside{
+    display: grid;
+    grid-area: sidebar;
+    background-color: aqua;
+}
+nav ul{
+    list-style: none;
+    color:black;
+}
+nav a{
+    text-decoration: none;
+    color:black;
+}
+main{
+    display: grid;
+    grid-area: area-principal;
+    background-color: blueviolet;
+    text-align: center;
+}
+footer{
+    display: grid;
+    grid-area: pie-página;
+    background-color: chartreuse;
+    text-align: center;
+}
+.graficos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.widget-destacado{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.tarjetas-resumen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:5px;
+    background-color: brown;
+}
+@media(max-width:768px){
+    .content{
+    display: grid;
+    grid-template-columns: 768px;
+    grid-template-rows: 80px 3fr 3fr 1fr;
+    grid-template-areas:
+    "barra-superior"
+    "area-principal"
+    "sidebar"
+    "pie-página";
+    gap:3px;
+}
+    .tarjetas-resumen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:5px;
+    background-color: brown;
+}
+.widget-destacado{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+}
